@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/style/logIn.css">
+    <title>Spotlight</title>
+</head>
+
+<body>
+    <header>
+        <p>LOGO Spotlight</p>
+    </header>
+    <main>
+
+        <!-- Boton Registo -->
+        <button type="button" class="boton btn" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+            Registro
+        </button>
+
+        <!-- Modal Registro -->
+        <article class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <section class="modal-header">
+                        <h3>Registro</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </section>
+                    <section class="modal-body">
+                        <form id="formularioRegistro" action="/register" method="post" class="row g-3">
+                            <div class="form-floating col-12">
+                                <input type="text" class="form-control" id="registroUsuario" placeholder="user">
+                                <label for="registroUsuario" class="form-label mx-2">Usuario</label>
+                            </div>
+                            <div class="form-floating col-12">
+                                <input type="email" class="form-control" id="registroEmail" placeholder="email">
+                                <label for="registroEmail" class="form-label mx-2">Email</label>
+                            </div>
+                            <div class="form-floating col-12">
+                                <input type="password" class="form-control" id="registroContraseña" placeholder="password">
+                                <label for="registroContraseña" class="form-label mx-2">Contraseña</label>
+                            </div>
+                            <div class="form-floating col-12">
+                                <input type="password" class="form-control" id="registroRepetirContraseña" placeholder="repeatPassword">
+                                <label for="registroRepetirContraseña" class="form-label mx-2">Repetir Contraseña</label>
+                            </div>
+                            <!-- <div class="col-md-6">
+                                <label class="form-label">Provinca</label>
+                                <select id="registroProvincia" class="form-select">
+                                    <option selected>Elegir...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Ciudad</label>
+                                <select id="registroCiudad" class="form-select">
+                                    <option selected>Elegir...</option>
+                                    <option>...</option>
+                                </select>
+                            </div> -->
+                            <div class="col-8 ms-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="registroCheck">
+                                    <label class="form-check-label" for="registroCheck">
+                                        Acepto los terminos y condiciones
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="modal-footer">
+                        <button type="button" class="boton2 btn" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="boton1 btn text-white">Registrar</button>
+                    </section>
+                </div>
+            </div>
+        </article>
+
+        <!-- Boton Ingreso -->
+        <button type="button" class="boton btn" data-bs-toggle="modal" data-bs-target="#modalIngreso">
+            Ingresar
+        </button>
+
+        <!-- Modal Ingreso -->
+        <article class="modal fade" id="modalIngreso" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <section class="modal-header">
+                        <h3>Ingreso</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </section>
+                    <section class="modal-body">
+                        <form id="formularioIngreso">
+                            <div class="form-floating col-12 mb-3">
+                                <input type="email" class="form-control" id="ingresoEmail" placeholder="email">
+                                <label for="ingresoEmail" class="form-label mx-2">Email</label>
+                            </div>
+                            <div class="form-floating col-12 mb-3">
+                                <input type="password" class="form-control" id="ingresoContraseña" placeholder="password">
+                                <label for="ingresoContraseña" class="form-label mx-2">Contraseña</label>
+                            </div>
+                            <div class="col-12 mt-3 ms-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="ingresoCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Recordarme
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="modal-footer">
+                        <button type="button" class="boton2 btn" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="boton1 btn text-white">Ingresar</button>
+                    </section>
+                </div>
+            </div>
+        </article>
+
+    </main>
+    <footer>
+        <p>Equipo de desarrollo Pondero</p>
+    </footer>
+    <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
